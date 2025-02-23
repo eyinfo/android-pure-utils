@@ -1,0 +1,48 @@
+plugins {
+    alias(libs.plugins.android.library)
+}
+
+android {
+    namespace 'com.eyinfo.android_pure_utils'
+    compileSdk 34
+
+    buildFeatures {
+        aidl true
+    }
+
+    defaultConfig {
+        minSdk 21
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    sourceSets {
+        main {
+            aidl {
+                srcDirs 'src/main/aidl', 'src/main/aidl/com/eyinfo/android_pure_utils'
+            }
+        }
+    }
+}
+
+dependencies {
+    implementation libs.appcompat
+    implementation libs.material
+    api libs.gson
+    api libs.rxjava
+    api libs.rxandroid
+    api libs.modelmapper
+    api libs.orika.core
+    api libs.jbcrypt
+}

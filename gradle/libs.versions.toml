@@ -1,0 +1,31 @@
+[versions]
+agp = "8.6.0"
+gson = "2.11.0"
+jbcrypt = "0.4"
+junit = "4.13.2"
+junitVersion = "1.1.5"
+espressoCore = "3.5.1"
+appcompat = "1.7.0"
+material = "1.10.0"
+modelmapper = "3.2.0"
+orikaCore = "1.5.4"
+rxandroid = "3.0.0"
+rxjava = "3.0.4"
+
+[libraries]
+gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
+jbcrypt = { module = "org.mindrot:jbcrypt", version.ref = "jbcrypt" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+modelmapper = { module = "org.modelmapper:modelmapper", version.ref = "modelmapper" }
+orika-core = { module = "ma.glasnost.orika:orika-core", version.ref = "orikaCore" }
+rxandroid = { module = "io.reactivex.rxjava3:rxandroid", version.ref = "rxandroid" }
+rxjava = { module = "io.reactivex.rxjava3:rxjava", version.ref = "rxjava" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+android-library = { id = "com.android.library", version.ref = "agp" }
+
