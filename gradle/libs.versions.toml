@@ -11,6 +11,7 @@ modelmapper = "3.2.0"
 orikaCore = "1.5.4"
 rxandroid = "3.0.0"
 rxjava = "3.0.4"
+yitterIdgenerator = "1.0.6"
 
 [libraries]
 gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
@@ -24,6 +25,7 @@ modelmapper = { module = "org.modelmapper:modelmapper", version.ref = "modelmapp
 orika-core = { module = "ma.glasnost.orika:orika-core", version.ref = "orikaCore" }
 rxandroid = { module = "io.reactivex.rxjava3:rxandroid", version.ref = "rxandroid" }
 rxjava = { module = "io.reactivex.rxjava3:rxjava", version.ref = "rxjava" }
+yitter-idgenerator = { module = "com.github.yitter:yitter-idgenerator", version.ref = "yitterIdgenerator" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
