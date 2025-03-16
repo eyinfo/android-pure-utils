@@ -10,7 +10,6 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/android-pure-utils" />
-            <option value="$PROJECT_DIR$/android-utils" />
             <option value="$PROJECT_DIR$/app" />
           </set>
         </option>

@@ -60,7 +60,7 @@ public abstract class CrashHandler implements UncaughtExceptionHandler {
 
     private CycleExecutor cycleExecutor = new CycleExecutor() {
         @Override
-        protected void onDoingExecutor(Object params) {
+        protected void onDoingWithMainLooper(Object params) {
             defaultHandlerCount++;
             UncaughtExceptionHandler handler = Thread.getDefaultUncaughtExceptionHandler();
             if (handler == null || (handler instanceof CrashHandler)) {
