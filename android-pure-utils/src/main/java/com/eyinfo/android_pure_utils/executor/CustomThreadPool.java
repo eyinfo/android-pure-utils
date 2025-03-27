@@ -1,7 +1,5 @@
 package com.eyinfo.android_pure_utils.executor;
 
-import android.os.Process;
-
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.ThreadPoolExecutor;
@@ -13,7 +11,7 @@ public class CustomThreadPool {
     private static final int CORE_POOL_SIZE = CPU_COUNT + 1;
     private static final int MAX_POOL_SIZE = CPU_COUNT * 2;
     private static final long KEEP_ALIVE_TIME = 30L;
-    private static final int QUEUE_CAPACITY = 100;
+    private static final int QUEUE_CAPACITY = 2000;
 
     private final ThreadPoolExecutor executor;
 
@@ -23,9 +21,7 @@ public class CustomThreadPool {
 
             @Override
             public Thread newThread(Runnable r) {
-                Thread thread = new Thread(r, "CustomThread-" + count.getAndIncrement());
-                thread.setPriority(Process.THREAD_PRIORITY_BACKGROUND);
-                return thread;
+                return new Thread(r, "CustomThread-" + count.getAndIncrement());
             }
         };
 
